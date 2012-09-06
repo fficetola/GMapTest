@@ -7,15 +7,14 @@
 //
 
 #import "AppDelegate.h"
-
-#import "ViewController.h"
+#import "MapViewController.h"
 
 @implementation AppDelegate
 
 - (void)dealloc
 {
     [_window release];
-    [_viewController release];
+    [_mapViewController release];
     [super dealloc];
 }
 
@@ -23,8 +22,8 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
-    self.window.rootViewController = self.viewController;
+    self.mapViewController = [[[MapViewController alloc] initWithNibName:@"MapView" bundle:nil] autorelease];
+    self.window.rootViewController = self.mapViewController;
     [self.window makeKeyAndVisible];
     return YES;
 }
